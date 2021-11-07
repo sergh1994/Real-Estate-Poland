@@ -1,0 +1,73 @@
+.clients {
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__content {
+    position: relative;
+    background: $gradient;
+    border: 2px solid $color-border;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 60px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url('../img/decor-bg.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      height: 100%;
+      width: 630px;
+      left: 0;
+      bottom: 0;
+      z-index: 0;
+    }
+  }
+
+  &__list {
+    @include flex-all-sb;
+  }
+
+  &__item {
+    max-width: 312px;
+    width: 100%;
+    color: $gray-500;
+    background-color: $white;
+    box-shadow: 0px 16px 24px rgba(249, 175, 49, 0.06),
+    0px 2px 6px rgba(249, 175, 49, 0.04),
+    0px 0px 1px rgba(249, 175, 49, 0.04);
+    border-radius: 20px;
+    padding: 20px;
+    z-index: 1;
+    
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__text,
+  &__author,
+  &__position {
+    max-width: 275px;
+    width: 100%;
+  }
+
+  &__text {
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 1.8;
+    min-height: 125px;
+  }
+
+  &__author {
+    color: $cod-gray;
+    margin-bottom: 10px;
+  }
+
+  &__position {
+    font-size: 14px;
+  }
+}
